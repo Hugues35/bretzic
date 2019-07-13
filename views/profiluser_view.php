@@ -12,13 +12,12 @@
     <div class="container">
         <div class="row">
 
-                <?php if (isset($_SESSION['admin']) || isset($_SESSION['pseudo'])): ?>
+                <?php if (isset($_SESSION['pseudo'])): ?>
 
                     <?php foreach ($Announcebyuser as $index1 => $allarticles): ?>
-
-                        <form action="./registrationsuccess" method="post" id="inscription-form">
-                        <p>
-                            <h3>Fiche profil</h3>
+                        <form action="./profilmodifysuccess" method="post" id="inscription-form">
+                            
+                            <h3>Mon profil "<?php echo ($_SESSION['pseudo']) ?>"</h3>
 
                             <div id="inscrip-form-datas">
                                 <ul>
@@ -40,37 +39,43 @@
 
                                     <li>Ville<br>
                                     <select name="location" id="town-inscrip" required >
-                                    <!-- Lecture de chaque ligne du tableau -->
+                                    <option value="<?php echo($allarticles['town']); ?>"><?= $allarticles['town'] ?></option>
                                     <?php foreach ($allTowns as $value): ?>
-                                        <option value="<?= $value['town'] ?>"><?= $value['town'] ?></option>
+                                        <?php if ($allarticles['town'] !== $value['town']) : ?>
+                                            <option value="<?= $value['town'] ?>"><?= $value['town'] ?></option>
+                                        <?php endif; ?>
                                     <?php endforeach; ?>
                                     </select></li>
                                    
                                     <li>Je suis<br>
                                     <select name="instrument" id="instrument-inscrip">
-                                    <!-- Lecture de chaque ligne du tableau -->
+                                    <option value="<?php echo($allarticles['instrument']); ?>"><?= $allarticles['instrument'] ?></option>   
                                     <?php foreach ($allInstruments as $value): ?>
-                                        <option value="<?= $value['instrument'] ?>"><?php echo($allarticles['instrument']); ?></option>
+                                        <?php if ($allarticles['instrument'] !== $value['instrument']) : ?>
+                                            <option value="<?= $value['instrument'] ?>"><?= $value['instrument'] ?></option>
+                                        <?php endif; ?>
                                     <?php endforeach; ?>
                                     </select></li>
 
                                     <li> 
-                                    <input type="radio" name="sex" value="<?php echo($allarticles['sex']); ?>" id="man" /> <label for="homme">Homme</label>
-                                    <input type="radio" name="sex" value="<?php echo($allarticles['sex']); ?>" id="woman" /> <label for="femme">Femme</label></li>
+                                    <input type="radio" name="sex" id="man" <?php if($allarticles['sex']=='Homme') echo "checked"; ?> value="Homme"> Homme
+                                    <input type="radio" name="sex" id="woman" <?php if($allarticles['sex']=='Femme') echo "checked"; ?> value="Femme"> Femme</li>
                                     
                                     <li>
-                                    <input type="radio" name="status" value="amateur" id="amateur" /> <label for="amateur">Amateur</label>
-                                    <input type="radio" name="status" value="pro" id="pro" /> <label for="pro">Pro</label></li>
+                                    <input type="radio" name="status" id="amateur" <?php if($allarticles['status']=='amateur') echo "checked"; ?> value="amateur"> Amateur
+                                                <input type="radio" name="status" id="pro" <?php if($allarticles['status']=='pro') echo "checked"; ?> value="pro"> Pro</li>
 
                                     <li>
-                                    <input type="radio" name="situation" value="group" id="group" /> <label for="group">Groupe</label>
-                                    <input type="radio" name="situation" value="solo" id="solo" /> <label for="solo">Solo</label></li>
+                                    <input type="radio" name="situation" id="group" <?php if($allarticles['situation']=='group') echo "checked"; ?> value="group"> Groupe
+                                    <input type="radio" name="situation" id="solo" <?php if($allarticles['situation']=='solo') echo "checked"; ?> value="solo"> Solo</li>
 
                                     <li>Style<br>
-                                    <select name="style" id="instrument-inscrip">
-                                    <!-- Lecture de chaque ligne du tableau -->
+                                    <select name="style" id="style-inscrip">
+                                    <option value="<?php echo($allarticles['style']); ?>"><?= $allarticles['style'] ?></option>   
                                     <?php foreach ($allStylezic as $value): ?>
-                                        <option value="<?= $value['style'] ?>"><?= $value['style'] ?></option>
+                                        <?php if ($allarticles['style'] !== $value['style']) : ?>
+                                            <option value="<?= $value['style'] ?>"><?= $value['style'] ?></option>
+                                        <?php endif; ?>
                                     <?php endforeach; ?>
                                     </select></li>
 
@@ -84,37 +89,52 @@
                                     <input type="url" name="weblink" id="link-inscrip" value="<?php echo($allarticles['weblink']); ?>" /></li>
 
                                     <li>Je me présente (facultatif)<br>
-                                    <textarea name="message" rows="8" cols="45" id="mess-inscrip" value="<?php echo($allarticles['presentation']); ?>"></textarea></li>
+                                    <input type="textarea" name="message" rows="8" cols="45" id="mess-inscrip" value="<?php echo($allarticles['presentation']); ?>"></li>
 
-                                    <div id="announceform">
+                                    <div class="mt-20"></div>
+                                    <div class="white-divider"></div> 
+
+                                    <div id="announce-block">
+
+                                        <h4>Si je souhaite passer une annonce... (facultatif)</h4>
+
                                         <li>Titre de l'annonce<br>
                                         <input type="text" name="title-announce" id="title-announce" value="<?php echo($allarticles['title_announce']); ?>" /></li>       
 
                                         <li>Annonce<br>
-                                        <textarea name="mess-announce" rows="8" cols="45" id="mess-announce" value="<?php echo($allarticles['message']); ?>" ></textarea></li>
+                                        <input type="textarea" name="mess-announce" rows="8" cols="45" id="mess-announce" value="<?php echo($allarticles['message']); ?>" ></li>
 
                                         <li>Je cherche<br>
-                                        <input type="radio" name="status-announce" value="amateur" id="amateur-announce" /> <label for="amateur">Amateur uniquement</label>
-                                        <input type="radio" name="status-announce" value="pro" id="pro-announce" /> <label for="pro">Pro uniquement</label></li>
-                                        <input type="radio" name="status-announce" value="amateurpro" id="amateurpro-announce" /> <label for="amateurpro">Amateur ou pro</label></li>
+                                         <input type="radio" name="status-announce" id="amateur-announce" <?php if($allarticles['status_announce']=='amateur') echo "checked"; ?> value="amateur"> Amateur
+                                        <input type="radio" name="status-announce" id="pro-announce" <?php if($allarticles['status_announce']=='pro') echo "checked"; ?> value="pro"> Pro
+                                        <input type="radio" name="status-announce" id="amateurpro-announce" <?php if($allarticles['status_announce']=='amateurpro') echo "checked"; ?> value="amateur"> Amateur ou pro</li>
 
                                         <li>Je cherche<br>
-                                        <input type="radio" name="situation-announce" value="group" id="group-announce" /> <label for="group">Groupe uniquement</label>
-                                        <input type="radio" name="situation-announce" value="solo" id="solo-announce" /> <label for="solo">Solo uniquement</label></li>
-                                        <input type="radio" name="situation-announce" value="sologroup" id="sologroup-announce" /> <label for="sologroup">Solo ou groupe</label></li>
+                                        <input type="radio" name="situation-announce" id="group-announce" <?php if($allarticles['situation_announce']=='group') echo "checked"; ?> value="group"> Groupe uniquement
+                                        <input type="radio" name="situation-announce" id="solo-announce" <?php if($allarticles['situation_announce']=='solo') echo "checked"; ?> value="solo"> Solo uniquement
+                                        <input type="radio" name="situation-announce" id="sologroup-announce" <?php if($allarticles['situation_announce']=='sologroup') echo "checked"; ?> value="sologroup"> Solo ou groupe</li>
                                     </div>
 
                                     <input type="hidden" name="id" value="<?= $allarticles['id'] ?>">
 
+                                    <div class="mt-20"></div>
+                                    <div class="white-divider"></div> 
+
+                                    <div class="mt-20"></div>
                                     <li><input type="submit" name="btn-modifyuser" id="btn-modifyuser" style="color:green" value="Mise à jour profil"></li>
+
+                                    <li>
+                                    <button id="btn-deleteprofil" name="btn-deleteprofil" type="submit"
+                                            title="Suppression de ce profil" value="<?= $allarticles[0] ?>"
+                                            style="color:red">
+                                            <i class="fas fa-trash-alt"></i></button>
+                                    </li>
 
                                 </ul>
                             </div>
-
-                        </p>
                         </form>
 
-                        <form method="POST" action="./profildeletesuccess">
+                        <!-- <form method="POST" action="./profildeletesuccess">
                             <button id="btn-deleteprofil" name="btn-deleteprofil" type="submit"
                                     title="Suppression de ce profil" value="<?= $allarticles[0] ?>"
                                     style="color:red">
@@ -122,7 +142,7 @@
                             <div class="mt-20"></div>
                             <div class="red-divider"></div>
                             <div class="mt-20"></div>
-                        </form>
+                        </form> -->
 
                     <?php endforeach; ?>
 

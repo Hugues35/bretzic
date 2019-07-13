@@ -11,25 +11,22 @@ window.onload  = function() {
     displayValidForm();
 
 
-    //var myMap = setMap();
+    var myMap = setMap();
 
-//     $.ajax({
-//         url: getApiUrl()
-//     }).done(function (response) {
+    $.ajax({
+        url: getApiUrl()
+    }).done(function (response) {
 
 
     
 
-// 	setMarkers(response, myMap)
-//     setListenerOnInput()
+	setMarkers(response, myMap)
+    setListenerOnInput()
 
 	
     
 	
-// 	}).fail(function (){
-//         displayError()
-//     })
-// })
-
-
+	 })//.fail(function (){
+ //        displayError()
+ //    })
 }

@@ -49,21 +49,21 @@ function initMap() {
 
 	// Nous appelons la fonction ajax de jQuery
 		$.ajax({
-		// 	// On pointe vers le fichier selectData.php
-		// 	url : "./assets/images/fichier.json",
-		// }).done(function(json){ // Si on obtient une réponse, elle est stockée dans la variable json
-		// 	// On construit l'objet villes à partir de la variable json 
-		// 	var villes = JSON.parse(json);
-		// 	// On parcourt l'objet villes
-		// 	for(ville in villes){
-		// 		var marker = new google.maps.Marker({
-		// 			// parseFloat nous permet de transformer la latitude et la longitude en nombre décimal
-		// 			position: {lat: parseFloat(villes[ville].lat), lng: parseFloat(villes[ville].lon)},
-		// 			title: villes[ville].nomVille,
-		// 			map: map
-		// 		});	
-		// 	}
-		// });
+			// On pointe vers le fichier selectData.php
+			url : "./assets/images/fichier.json",
+		}).done(function(json){ // Si on obtient une réponse, elle est stockée dans la variable json
+			// On construit l'objet villes à partir de la variable json 
+			var villes = JSON.parse(json);
+			// On parcourt l'objet villes
+			for(ville in villes){
+				var marker = new google.maps.Marker({
+					// parseFloat nous permet de transformer la latitude et la longitude en nombre décimal
+					position: {lat: parseFloat(villes[ville].lat), lng: parseFloat(villes[ville].lon)},
+					title: villes[ville].nomVille,
+					map: map
+				});	
+			}
+		});
 
 
 
@@ -76,5 +76,3 @@ window.onload = function(){
 	initMap();
 
 };
-
-

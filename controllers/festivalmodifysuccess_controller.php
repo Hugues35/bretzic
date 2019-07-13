@@ -17,12 +17,12 @@ if(!empty($_POST) && isset($_POST['btn-festivalmodify'])) {
     $newlon = $_POST['lon-modify'];
     Festivals::modifyFestival($id, $newdatebegin, $newdateend, $newname, $newtown, $newdepart, $newwebsite, $newlat, $newlon);
 
-    $modify == 1;
+    $modify = 1;
 }
 
 if(!empty($_POST) && isset($_POST['btn-festivaldelete'])) {
     $idDelete = $_POST['btn-festivaldelete'];
     Festivals::deleteFestival($idDelete);
 
-    $modify == 0;
+    $modify = 0;
 }

@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <?php include_once 'views/includes/head.php '?>
+    <?php include_once "views/includes/head.php" ?>
     <title>Bretzic</title>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar">
 
-    <?php include_once 'views/includes/header.php '?>
+    <?php include_once "views/includes/header.php" ?>
+
+    <div id="scrolltop-block">
+        <a href="#page-top"><i class="fas fa-chevron-circle-up"></i></a>
+    </div>
+
+    <?php if (isset($_SESSION['pseudo'])): ?>
+      <div id="user-identity-block">
+          <p><i class="fas fa-user"></i><?php echo ($_SESSION['pseudo']); ?></p>
+      </div>
+    <?php endif; ?>
 
     <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <p><h1 class="h1-custom">Bretzic.com connecte les musiciens de Bretagne !</h1></p>
-            <p><h1 class="h1-custom"><i class="fas fa-bolt"></i> Festivals <i class="fas fa-plug"></i>Concerts <i class="fas fa-plug"></i>Annonces <i class="fas fa-plug"></i>Portraits  <i class="fas fa-bolt"></i></h1></p>
-            <!--<p><a href="http://www.bretzic.com" class="bandeau" src="images/bandeau.png" alt="festivals-concerts-annonces-musiciens-bretagne"/></a></p>-->
+            <h1 class="h1-custom">Bretzic.com connecte les musiciens de Bretagne !</h1>
+            <h1 class="h1-custom"><i class="fas fa-bolt"></i> Festivals <i class="fas fa-plug"></i>Concerts <i class="fas fa-plug"></i>Annonces <i class="fas fa-plug"></i>Portraits &nbsp;<i class="fas fa-bolt"></i></h1>
+        
             <div class="row">
               <div class="col-md-9">
                 <div class="row">
@@ -90,12 +100,16 @@
         </div>
       </div>
 
-
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-              <a id="connect_link" href="./registration" class="btn btn-connect" type="button"><i class="far fa-hand-point-right"></i> S'enregistrer ~ Passer une annonce<i class="fas fa-plug"></i></a>
-              <a id="connect_link" href="./userconnection" class="btn btn-connect" type="button"><i class="far fa-hand-point-right"></i> Connexion ~ Déconnexion<i class="fas fa-plug"></i></a>
+          <div class="col-md-4">   
+              <?php if (isset($_SESSION['pseudo'])): ?>
+                  <a id="connect_link" href="./profiluser" class="btn btn-connect" type="button"><i class="far fa-hand-point-right"></i> Mon profil <i class="fas fa-user"></i></a>
+                  <a id="connect_link" href="./userconnection" class="btn btn-connect" type="button"><i class="far fa-hand-point-right"></i> Déconnexion <i class="fas fa-sign-out-alt"></i></a>
+              <?php else: ?>
+                  <a id="connect_link" href="./registration" class="btn btn-connect" type="button"><i class="far fa-hand-point-right"></i> S'enregistrer ~ Passer une annonce<i class="fas fa-plug"></i></a>
+                  <a id="connect_link" href="./userconnection" class="btn btn-connect" type="button">Déjà membre ?... &nbsp;<i class="far fa-hand-point-right"></i> Connexion<i class="fas fa-plug"></i></a>
+              <?php endif; ?>
           </div>
         </div>
       </div>
@@ -103,16 +117,15 @@
       <div class="container">
         <div class="row">
         
-
-            <h1 class="h1-custom">Annonces musiciens</h1> 
+            <h1 id="title-table"><i class="fas fa-microphone-alt"></i> Annonces musiciens</h1> 
             <div class="row">
               <div class="col-md-9">
                 <table>
                   <thead>
                     <tr> 
-                      <th>Membre <i class="fas fa-user"></i></th> 
-                      <th>Profil <i class="fas fa-id-card"></i></th>
-                      <th>Recherche <i class="fas fa-search"></i></th> 
+                      <th>Membre &nbsp;<i class="fas fa-user"></i></th> 
+                      <th>Profil &nbsp;<i class="fas fa-id-card"></i></th>
+                      <th>Recherche &nbsp;<i class="fas fa-search"></i></th> 
                     </tr>
                   </thead>
                   <?php foreach ($allAnnounces as $index => $item): ?>
@@ -133,16 +146,16 @@
                           <li><strong><?php echo $item['instrument'] ?></strong></li>
                           <li>Style : <?php echo $item['style'] ?></li>
                           <li>Expérience : <?php echo $item['experience'] ?> ans</li>
-                          <li>Groupe : <?php echo $item['groupname'] ?></li>
+                          <li>Nom groupe : <?php echo $item['groupname'] ?></li>
                           <li><a href="<?php echo $item['weblink']; ?>"title="Lien web" target="_blank">Lien web</a></li>
                         </ul>
                       </td>
                       <td>
                         <ul>
-                          <li><strong><?php echo $item['title_announce'] ?></strong></li>
+                          <li><strong>Annonce : <?php echo $item['title_announce'] ?></strong></li>
                           <li><?php echo $item['message'] ?></li>
-                          <li><?php echo $item['status_announce'] ?></li>
-                          <li><?php echo $item['situation_announce'] ?></li>
+                          <li>Statut : <?php echo $item['status_announce'] ?></li>
+                          <li>Situation : <?php echo $item['situation_announce'] ?></li>
                         </ul> 
                       </td>
                     </tr>
@@ -155,16 +168,11 @@
 
             </div>
 
-
-
-
-
-
           </div>
         </div>
       </div>
 
-    <?php include_once 'views/includes/footer.php '?>
+    <?php include_once "views/includes/footer.php" ?>
 
 </body>
 </html>

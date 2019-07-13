@@ -115,7 +115,12 @@
                       'lon' => $article['lon']
                   ];
                       
-                      echo json_encode($data);?> 
+                      echo json_encode($data); 
+                      // echo json_encode($data['lat']);
+                      // echo json_encode($data['lon']);?>
+
+                      <div id="latvalues"><?php echo json_encode($data['lat']); ?>"></div>
+                      <div id="lonvalues"><?php echo json_encode($data['lon']); ?>"></div>
 
                  <?php      
 

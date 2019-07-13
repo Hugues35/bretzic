@@ -58,17 +58,13 @@ if(!empty($_POST) && isset($_POST['btn-inscrip'])){
                 //mail('huguesfleury35133@gmail.com', 'Inscription', $message);
                 //mail($email, 'Votre inscription a bien été enregistrée sur www.bretzic.com. Merci !', $message);
 
+                // Enregistrement d'une session
                 $_SESSION['pseudo'] = $pseudo;
-
-                // Affiche un message de confirmation d'envoi
-                echo 'Bonjour ' . $_POST['pseudo'].' Votre inscription a bien été ajoutée. Merci !';
 
                 // Envoi de la requête la table "users"
                 $query = "INSERT INTO users(pseudo, password, email, birthyear, town, sex, status, situation, instrument, style, experience, groupname, weblink, presentation,title_announce, message, status_announce, situation_announce) VALUES(\"$pseudo\", \"$pass_hache\", \"$email\", \"$birthyear\", \"$town\", \"$sex\", \"$status\", \"$situation\", \"$instrument\", \"$style\", \"$experience\", \"$groupname\", \"$weblink\", \"$presentation\", \"$titleannounce\", \"$messannounce\", \"$statusannounce\", \"$situationannounce\")";
                 $requete = $db->prepare($query);
                 $requete->execute(array($pseudo, $pass_hache, $email, $birthyear, $town, $sex, $status, $situation, $instrument, $style, $experience, $groupname, $weblink, $presentation, $titleannounce, $messannounce, $statusannounce, $situationannounce));
-                //header('Location: ./registrationsuccess');
-                //$validation = 'Bonjour ' . $pseudo .'. Vos informations ont bien été enregistrées. Merci !';
                 sleep(1);
                 unset($_POST);
             }

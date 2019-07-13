@@ -19,9 +19,18 @@
 
                     <div style="color:red;font-weight: bold"><p>Vous n'êtes pas connecté ! Connectez-vous sur la page d'accueil SVP.</p></div>
              
-                <?php else: ?>
+                <?php else: 
 
-                    <div style="color:green;font-weight: bold"><p>La suppression du profil numéro <?php echo "$idDelete" ?> a bien été effectuée !</p></div>
+                    if ($modify = 0): ?>
+
+                        <div style="color:green;font-weight: bold"><p>La suppression du profil numéro <?php echo "$idDelete" ?> a bien été effectuée !</p></div>
+
+
+                    <?php else: ?>
+
+                        <div style="color:green;font-weight: bold"><p>La modification du profil numéro <?php echo "$id" ?> a bien été effectuée !</p></div>
+
+                    <?php endif; ?>
 
                 <?php endif; ?>
 

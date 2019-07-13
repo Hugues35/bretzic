@@ -32,8 +32,7 @@
                                     <input type="password" name="password" placeholder="Mot de passe" required></li>    
                                 </ul>
                                 <div class="mt-20"></div>
-                                <p><label><input type="checkbox" name="connect" checked> Connexion
-                                        automatique</label></p>
+                                <p><label><input type="checkbox" name="connect" checked> Connexion automatique</label></p>
                                 <div class="mt-20"></div>
                                 <div id="button">
                                     <button type="submit" name="btnConnexion" style="color:green">Connexion  &nbsp;<i class="fas fa-sign-in-alt"></i></button>
@@ -62,9 +61,9 @@
                         <p id="error" style="color:red"><?= $error ?></p>
                     <?php elseif (isset($success)): ?>
                         <div class="mt-50"></div>
-                        <p id="success" style="color:green"><?= $success ?></p>
-                        
+                        <p id="success" style="color:green;font-weight: bold"><?= $success ?></p>
                     <?php endif; ?>
+                    <div class="mt-20"></div>
                 
                 </div>     
             </div>

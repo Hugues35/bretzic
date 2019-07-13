@@ -12,11 +12,10 @@
     <section id="home-body-contact">
         <div class="container">     
             <div class="row">
-                <div id="contact-container" class="col-md-12">
+                <div id="userconnection-block" class="col-md-12">
 
-                    <img src="assets/images/ecrivain.jpg" alt="Jean Forteroche" />
                     <div class="mt-20"></div>
-                    <h1>Contactez-moi</h1>
+                    <h1>Contactez-nous !</h1>
                     <div class="mt-20"></div>
                     <form action="" method="post">
                         <div class="form-group">
@@ -31,7 +30,7 @@
                             <label for="exampleFormControlTextarea1">Message</label>
                             <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="8" placeholder="Mon message..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2" name="btnContact">Envoyer</button>
+                        <button type="submit" class="btn-contact" name="btnContact">Envoyer</button>
                     </form>
                 </div>
             </div>

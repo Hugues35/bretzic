@@ -1,15 +1,14 @@
-var btnAnnounce=('#btn-announce');
 var btnFestivalmodify=('#btn-festivalmodify');
 var btnFestivaldelete=('#btn-festivaldelete');
 var festivDeletetext=('#festiv-delete-text');
 
-function displayValidForm(){
-    $(btnAnnounce).on('click', function () {
-        //$('#announceform').fadeIn('slow');
-        $('#town-inscrip').fadeOut('slow');
-        $(document).scrollTop(btnAnnounce);       
-    })
-}
+// function displayValidForm(){
+//     $(btnAnnounce).on('click', function () {
+//         //$('#announceform').fadeIn('slow');
+//         $('#town-inscrip').fadeOut('slow');
+//         $(document).scrollTop(btnAnnounce);       
+//     })
+// }
 
 function displayModifFestiv(){
     $(btnFestivalmodify).on('click', function () {

@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 header
 {
 background-size: cover;
@@ -45,12 +48,17 @@ background-size: cover;
   height: 2px;
   background-color: grey;
 }
+.white-divider{
+  width: 90%;
+  height: 2px;
+  background-color: white;
+}
 .h1-custom{
 color: white;
 text-align: center;
 font-size: 1.5em;
 vertical-align: center;
-margin-bottom: 30px;
+margin-bottom: 10px;
 }
 
 .element{
@@ -90,12 +98,16 @@ margin-top: 0px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  width: 1170px;
 }
 
 /* MAP https://leafletjs.com */
 #mapid{
   height: 659px;
   width: 100%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  z-index: 50;
 }
 
 /* Page connexion administrateur */
@@ -105,7 +117,7 @@ margin-top: 0px;
   width: 40%;
   background-color: rgba(165, 105, 189, 1);
   border-radius: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   margin-right: auto;
   margin-left: auto;
   align-items: 100%;
@@ -137,6 +149,7 @@ margin-top: 0px;
   align-items: 100%;
   border: 0.4px solid purple;
   padding-left: 15px;
+  margin-bottom: 50px;
 }
 #inscription-form h3{
   text-align: center;
@@ -159,6 +172,10 @@ margin-top: 0px;
   color: white;
   background-color: purple;
 }
+/* Page registration */
+#announce-block{
+  font-style: italic;
+}
 li{
   padding-top: 2px;
   padding-bottom: 2px;
@@ -172,7 +189,7 @@ input, textarea, select{
   padding: 5px;
   border-radius: 5px;
 }
-#pseudo-inscrip, #email-inscrip, #pass-inscrip, #birth-inscrip, #instrument-inscrip, #group-inscrip, #town-inscrip, #exper-inscrip, #link-inscrip, #mess-inscrip{
+#pseudo-inscrip, #email-inscrip, #passconfirm-inscrip, #pass-inscrip, #birth-inscrip, #instrument-inscrip, #group-inscrip, #style-inscrip, #town-inscrip, #exper-inscrip, #link-inscrip, #mess-inscrip{
   width: 90%;
 }
 select option{
@@ -198,6 +215,7 @@ label{
   margin-left: auto;
   align-items: 100%;
   border: 0.4px solid purple;
+
 }
 #title-announce, #mess-announce{
   width: 90%;
@@ -291,11 +309,17 @@ input, textarea, select{
 table{
   width: 100%;
   font-size: 11px;
+  border: 2px solid white;
+  margin-bottom: 50px;
 }
-
 tr:nth-child(odd){
   background:#EAECEE;
   vertical-align: top; 
+}
+#title-table{
+  font-size: 22px;
+  color: white;
+  margin-top: 40px;
 }
 
 /*#announces-list tr td li ul{
@@ -501,26 +525,54 @@ tr:hover
   width: 40px;
 }
 
+#scrolltop-block{
+    position: fixed;
+    right: 0; 
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 5px;
+    width: auto;
+    height: auto;    
+    bottom: 5%;
+    text-align: center;
+    z-index: 999;
+}
+#user-identity-block{
+    position: fixed;
+    right: 0; 
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+    padding-top: 2px;
+    padding-right: 4px;
+    padding-left: 4px;
+    width: auto;
+    height: 28px;    
+    top: 10%;
+    text-align: center;
+    z-index: 999;
+    background-color: purple;
+    border-radius: 5px;
+    opacity: 0.5;
+}
+.fa-chevron-circle-up{
+  font-size: 40px;
+  color: purple;
+}
+.fa-chevron-circle-up:hover{
+  color: grey; 
+}
+
 /* responsive design avec les media queries ci-dessous */
 
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
+@media (max-width: 1000px) {
   .affiche_petite0, .affiche_petite1, .affiche_petite2, .affiche_petite3{
     display: none;
   }
-}
-@media (min-width: 768px) {
+
+@media (max-width: 768px) {
   .container {
     width: 750px;
   }
-  .affiche_petite0, .affiche_petite1, .affiche_petite2, .affiche_petite3{
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
+  

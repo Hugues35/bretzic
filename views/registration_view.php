@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <?php include_once 'views/includes/head.php '?>
+    <?php include_once "views/includes/head.php" ?>
     <title>Bretzic</title>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar">
 
-    <?php include_once 'views/includes/header.php '?>
+    <?php include_once "views/includes/header.php" ?>
 
     <div class="container">
         <div class="row">
@@ -45,15 +45,15 @@
                            
                             <li>Je suis<br>
                             <select name="instrument" id="instrument-inscrip">
-                            <!-- Lecture de chaque ligne du tableau -->
+                            
                             <?php foreach ($allInstruments as $value): ?>
                                 <option value="<?= $value['instrument'] ?>"><?= $value['instrument'] ?></option>
                             <?php endforeach; ?>
                             </select></li>
 
                             <li> 
-                            <input type="radio" name="sex" value="man" id="man" /> <label for="man">Homme</label>
-                            <input type="radio" name="sex" value="woman" id="woman" /> <label for="woman">Femme</label></li>
+                            <input type="radio" name="sex" value="Homme" id="man" /> <label for="man">Homme</label>
+                            <input type="radio" name="sex" value="Femme" id="woman" /> <label for="woman">Femme</label></li>
                             
                             <li>
                             <input type="radio" name="status" value="amateur" id="amateur" /> <label for="amateur">Amateur</label>
@@ -65,7 +65,7 @@
 
                             <li>Style<br>
                             <select name="style" id="instrument-inscrip">
-                            <!-- Lecture de chaque ligne du tableau -->
+                            
                             <?php foreach ($allStylezic as $value): ?>
                                 <option value="<?= $value['style'] ?>"><?= $value['style'] ?></option>
                             <?php endforeach; ?>
@@ -83,10 +83,13 @@
                             <li>Je me présente (facultatif)<br>
                             <textarea name="message" rows="8" cols="45" id="mess-inscrip" placeholder="Message"></textarea></li>
 
-                            
-                            <li><button id="btn-announce">Ajouter une annonce</button></li>
+                            <div class="mt-20"></div>
+                            <div class="white-divider"></div>  
 
-                            <div id="announceform">
+                            <div id="announce-block">
+
+                                <h4>Si je souhaite passer une annonce... (facultatif)</h4>
+
                                 <li>Titre de l'annonce<br>
                                 <input type="text" name="title-announce" id="title-announce" placeholder="Texte" /></li>       
 
@@ -104,9 +107,13 @@
                                 <input type="radio" name="situation-announce" value="sologroup" id="sologroup-announce" /> <label for="sologroup">Solo ou groupe</label></li>
                             </div>
 
+                            <div class="mt-20"></div>
+                            <div class="white-divider"></div> 
+                            <div class="mt-20"></div>
+
                             <li><input type="submit" name="btn-inscrip" id="btn-inscrip" value="Envoyer" /></li>
 
-                            <div class="mt-50"></div>
+                            <div class="mt-20"></div>
 
                         </ul>
                     </div>            
@@ -115,7 +122,7 @@
         </div>
     </div>
 
-    <?php include_once 'views/includes/footer.php '?>
+    <?php include_once "views/includes/footer.php" ?>
 
 </body>
 </html>
