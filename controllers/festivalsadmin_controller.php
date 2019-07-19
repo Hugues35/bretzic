@@ -19,7 +19,6 @@ if(!empty($_POST) && isset($_POST['btn-newfestival'])){
             $lat = str_secur($_POST['festival-lat']);
             $lon = str_secur($_POST['festival-lon']);
             
-            // Enregistrement des données dans la table "festivals"
             $query = "INSERT INTO festivals(name, date_beginning, date_end, town, department, site_link, lat, lon) VALUES(\"$name\", \"$date_beginning\", \"$date_end\", \"$town\", \"$department\", \"$site_link\", \"$lat\", \"$lon\")";
             $requete = $db->prepare($query);
             $requete->execute(array($name, $date_beginning, $date_end, $town, $department, $site_link, $lat, $lon));

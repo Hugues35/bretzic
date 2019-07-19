@@ -6,4 +6,3 @@ $allFestivals = Festivals::getAllFestivals();
 $allFestivalsJson = Festivals::getFestivalsJson();
 
 
-

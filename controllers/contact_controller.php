@@ -10,7 +10,6 @@ if(!empty($_POST) && isset($_POST['btnContact'])){
             $message .= ' - email envoyé par: ' . $firstname . ' : ' . $email;
             debug($message);
 
-            // ENVOYER UN EMAIL
             mail('huguesfleury35133@gmail.com', 'On me contact sur mon site', $message);
         }else{
             $error = "Vous devez remplir tous les champs !";

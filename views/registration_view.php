@@ -37,7 +37,6 @@
 
                             <li>Ville<br>
                             <select name="location" id="town-inscrip" required >
-                            <!-- Lecture de chaque ligne du tableau -->
                             <?php foreach ($allTowns as $value): ?>
                                 <option value="<?= $value['town'] ?>"><?= $value['town'] ?></option>
                             <?php endforeach; ?>

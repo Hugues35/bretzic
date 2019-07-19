@@ -20,9 +20,9 @@
         
                           <div style="color:red;font-weight: bold"><p>Vous n'êtes pas connecté ! Connectez vous sur la page d'accueil</p></div>
                  
-                      <?php else: 
+                      <?php else: ?>
 
-                          if ($modify = 1): ?>
+                         <?php if ($modify == 1): ?>
 
                               <div id="festiv-modif-text" style="color:green;font-weight: bold"><p>Festival numéro <?= $id ?> modifié : <br><br>Date début : <?= $newdatebegin ?><br>Date fin : <?= $newdateend ?><br>Nom : <?= $newname ?><br>Ville : <?= $newtown ?><br>Département : <?= $newdepart ?><br>Site web : <?= $newwebsite ?><br>Latitude : <?= $newlat ?><br>Longitude : <?= $newlon ?><br></p></div>
 

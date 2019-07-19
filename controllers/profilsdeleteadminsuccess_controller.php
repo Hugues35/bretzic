@@ -41,19 +41,6 @@ if(!empty($_POST) && isset($_POST['btn-modifyuser'])){
             } else {
 
                 $pass_hache = password_hash($password, PASSWORD_DEFAULT);
-               
-                // Test si mail utilisé
-                // $req = $db->prepare("SELECT count(*) as numberEmail FROM users WHERE email = ?");
-                // $req->execute(array($email));
-         
-                // while($email_verification = $req->fetch()){
-                //     if($email_verification['numberEmail'] != 0) {
-                //         header('location: index.php?error=1&email=1');
-                //         exit();
-                //     }
-                // }
-               // Affiche un message de confirmation d'envoi
-                //echo 'Bonjour ' . $_POST['pseudo'].' Votre profil a bien été modifié !';
 
                 $modify = 1;
 

@@ -63,7 +63,7 @@
                                     
                                     <li>
                                     <input type="radio" name="status" id="amateur" <?php if($allarticles['status']=='amateur') echo "checked"; ?> value="amateur"> Amateur
-                                                <input type="radio" name="status" id="pro" <?php if($allarticles['status']=='pro') echo "checked"; ?> value="pro"> Pro</li>
+                                    <input type="radio" name="status" id="pro" <?php if($allarticles['status']=='pro') echo "checked"; ?> value="pro"> Pro</li>
 
                                     <li>
                                     <input type="radio" name="situation" id="group" <?php if($allarticles['situation']=='group') echo "checked"; ?> value="group"> Groupe
@@ -96,7 +96,7 @@
 
                                     <div id="announce-block">
 
-                                        <h4>Si je souhaite passer une annonce... (facultatif)</h4>
+                                        <h4>Annonce passée</h4>
 
                                         <li>Titre de l'annonce<br>
                                         <input type="text" name="title-announce" id="title-announce" value="<?php echo($allarticles['title_announce']); ?>" /></li>       
@@ -121,7 +121,6 @@
                                     <div class="white-divider"></div> 
 
                                     <div class="mt-20"></div>
-                                    <li><input type="submit" name="btn-modifyuser" id="btn-modifyuser" style="color:green" value="Mise à jour profil"></li>
 
                                     <li>
                                     <button id="btn-deleteprofil" name="btn-deleteprofil" type="submit"
@@ -133,16 +132,6 @@
                                 </ul>
                             </div>
                         </form>
-
-                        <!-- <form method="POST" action="./profildeletesuccess">
-                            <button id="btn-deleteprofil" name="btn-deleteprofil" type="submit"
-                                    title="Suppression de ce profil" value="<?= $allarticles[0] ?>"
-                                    style="color:red">
-                                    <i class="fas fa-trash-alt"></i></button>
-                            <div class="mt-20"></div>
-                            <div class="red-divider"></div>
-                            <div class="mt-20"></div>
-                        </form> -->
 
                     <?php endforeach; ?>
 

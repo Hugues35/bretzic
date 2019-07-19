@@ -22,7 +22,7 @@
              
                 <?php else: ?>
 
-                     <div style="color:red;font-weight: bold"><p>Vous n'êtes pas connecté ! Rendez-vous sur la page d'accueil</p></div>
+                     <div style="color:red;font-weight: bold"><p>Votre identifiant ou mot de passe n'est pas correct ! Rendez-vous sur la page d'accueil</p></div>
                      
                 <?php endif; ?>
   

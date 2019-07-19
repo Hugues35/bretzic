@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="http://www.bretzic.com"><img class="logo" src="./assets/images/logo_bretzic2.png" alt="festivals-concerts-annonces-musiciens-bretagne"/>
+          <a href="index"><img class="logo" src="./assets/images/logo_bretzic.png" alt="festivals-concerts-annonces-musiciens-bretagne"/>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">

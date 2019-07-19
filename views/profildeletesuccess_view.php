@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <?php include_once 'views/includes/head.php '?>
+    <?php include_once "views/includes/head.php" ?>
     <title>Bretzic</title>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar">
 
-    <?php include_once 'views/includes/header.php '?>
+    <?php include_once "views/includes/header.php" ?>
 
       <div class="container">
           <div class="row">
@@ -28,7 +28,7 @@
               </div>
           </div>
 
-    <?php include_once 'views/includes/footer.php '?>
+    <?php include_once "views/includes/footer.php" ?>
 
 </body>
 </html>

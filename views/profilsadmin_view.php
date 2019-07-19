@@ -71,8 +71,8 @@
                                                 </select></li>
 
                                                 <li> 
-                                                <input type="radio" name="sex" id="man" <?php if($allarticles['sex']=='man') echo "checked"; ?> value="man"> Homme
-                                                <input type="radio" name="sex" id="woman" <?php if($allarticles['sex']=='woman') echo "checked"; ?> value="woman"> Femme</li>
+                                                <input type="radio" name="sex" id="man" <?php if($allarticles['sex']=='Homme') echo "checked"; ?> value="Homme"> Homme
+                                                <input type="radio" name="sex" id="woman" <?php if($allarticles['sex']=='Femme') echo "checked"; ?> value="Femme"> Femme</li>
 
                                             </ul>
                                         </td> 
@@ -148,9 +148,7 @@
                                                 <input type="hidden" name="id" value="<?= $allarticles['id'] ?>">
 
                                                 <li><input type="submit" name="btn-modifyuser" id="btn-modifyuser" style="color:green" value="Mise à jour"></li>
-                                                <!-- </form>
-
-                                                <form method="POST" action="./profilsdeleteadminsuccess"> -->
+                                                
                                                 <button id="btn-deleteprofil" name="btn-deleteprofil" type="submit"
                                                         title="Suppression de ce profil" value="<?= $allarticles['id'] ?>"
                                                         style="color:red">

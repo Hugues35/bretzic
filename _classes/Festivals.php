@@ -59,7 +59,7 @@ class Festivals
 
         global $db;
 
-       $reqFestivals = $db->prepare('SELECT * FROM festivals');
+        $reqFestivals = $db->prepare('SELECT * FROM festivals');
         $reqFestivals->execute([]);
         return $reqFestivals->fetchAll();
         
@@ -85,5 +85,6 @@ class Festivals
         $requete->execute();
         sleep(1);
         unset($_POST);
-    }
+    }   
+
 }

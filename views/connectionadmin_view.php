@@ -20,7 +20,6 @@
                     <h2>Connexion administrateur</h2>
                     <div class="mt-20"></div>
 
-                    <!-- Si connecté, affichage du formulaire -->
                     <?php if (!isset($_SESSION['admin'])): ?>
                         <div id="form">
                             <form method="POST" action="">

@@ -20,8 +20,7 @@
                     <div style="color:red;font-weight: bold"><p>Vous n'êtes pas connecté ! Connectez vous sur la page d'accueil</p></div>
              
                 <?php else: ?>
-
-                    
+               
                     <div style="color:green;font-weight: bold">
 
                         <p>Bonjour <?php echo $_SESSION['pseudo'] ?> Votre inscription est bien enregistrée. Merci !;<br>

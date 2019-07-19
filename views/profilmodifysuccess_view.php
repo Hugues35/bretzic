@@ -15,21 +15,13 @@
 
                   <div class="mt-50"></div>
 
-                  <?php if (!isset($_SESSION['pseudo'])): ?>
-
-                     <div style="color:red;font-weight: bold"><p>Vous n'êtes pas connecté ! Connectez vous sur la page d'accueil</p></div>
-             
-                  <?php else:
-
-                      if ($modify = 0): ?>
-
-                          <div style="color:green;font-weight: bold"><p>La suppression du profil a bien été effectuée ! Nous espérons à bientôt :-)</p></div>
-
-                      <?php else: ?>
+                  <?php if (isset($_SESSION['pseudo'])): ?>
 
                           <div style="color:green;font-weight: bold"><p><?php echo ($_SESSION['pseudo']) ?>, votre profil a bien été modifié !<br><br><i class="far fa-thumbs-up"></i></p></div>
 
-                      <?php endif; ?>
+                  <?php else: ?>
+
+                     <div style="color:red;font-weight: bold"><p>Vous n'êtes pas connecté ! Connectez vous sur la page d'accueil</p></div>  
 
                   <?php endif; ?>
 

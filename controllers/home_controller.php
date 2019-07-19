@@ -4,8 +4,6 @@ include_once '_classes/Announces.php';
 
 $allAnnounces = Announces::getAllAnnounces();
 
-
-
 // Formulaire inscription
 if(!empty($_POST) && isset($_POST['btn-inscrip'])){
     if(isset($_POST['pseudo'])){

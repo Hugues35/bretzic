@@ -55,12 +55,6 @@ if(!empty($_POST) && isset($_POST['btn-modifyuser'])){
                         exit();
                     }
                 }
-                //$message .= ' - nouvelle inscription par: ' . $pseudo;
-                //debug($message);
-
-                // Envoi emails
-                //mail('huguesfleury35133@gmail.com', 'Inscription', $message);
-                //mail($email, 'Votre inscription a bien été enregistrée sur www.bretzic.com. Merci !', $message);
 
                 // Affiche un message de confirmation d'envoi
                 echo 'Bonjour ' . $_POST['pseudo'].' Votre inscription a bien été ajoutée. Merci !';

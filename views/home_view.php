@@ -42,21 +42,21 @@
                     </div>
                     <div class="col-md-4">
                       <div class="element">
-                        <h4><i class="fas fa-microphone-alt"></i>ANNONCES MUSICIENS </h4>
+                        <h4><i class="fas fa-microphone-alt"></i>MUSICIENS</h4>
                         <a href="./home"><input class="btn btn-couleur" type="button" value="GO !"></a>
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="element">
                       <br>
-                        <h4><i class="fas fa-drum"></i>ANNONCES MATERIEL</h4>
+                        <h4><i class="fas fa-drum"></i>MATERIEL</h4>
                         <a href=""><input class="btn btn-couleur" type="button" value="GO !"></a>
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="element">
                       <br>
-                        <h4><i class="fas fa-users"></i>FORUM </h4>
+                        <h4><i class="fas fa-users"></i>FORUM</h4>
                         <a href=""><input class="btn btn-couleur" type="button" value="GO !"></a>
                       </div>
                     </div>
