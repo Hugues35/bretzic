@@ -1,0 +1,727 @@
+html{
+  scroll-behavior: smooth;
+}
+header{
+background-size: cover;
+position: fixed;
+width: 100%;
+top: 0px;
+text-align: center;
+z-index: 100;
+}
+.logo{
+width: 260px;
+z-index: 2;
+padding-top: 10px;
+}
+body{
+width: 100%;
+margin-top: 60px;
+font-family: helvetica;
+background-color: #222;
+background-size: cover;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.mt-50{
+  margin-top: 50px;
+}
+.mt-10{
+  margin-top: 100px;
+}
+.grey-divider{
+  width: 100%;
+  height: 2px;
+  background-color: grey;
+}
+.white-divider{
+	width: 90%;
+	height: 2px;
+	background-color: white;
+}
+.h1-custom{
+	position: absolute;
+	top: 332px;
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+	vertical-align: center;
+	margin-left: 30px;
+}
+#home-titles{ 
+  position: absolute;
+  top: 80px;
+  color: white;
+  font-size: 1.8em;
+  vertical-align: center;
+  margin-left: 30px;
+}
+.home-titles1, .home-titles2, .home-titles3{
+   opacity: 0;/* Caché à l'ouverture de la page */
+}
+.bretagne img{
+  width: 100px;
+}
+#homelinks-block{
+	margin-top: 10px;
+}
+.element{
+	height: 130px;
+	width: 100%;
+	background-color: rgba(165, 105, 189, 0.3);
+	border-radius: 6px;
+	text-align: center;
+	line-height: 1.5px;
+	color:purple;
+	margin-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 0.4px solid purple;
+}
+.element h4{
+  color: purple;
+  font-weight: bold;
+}
+
+.bretzic_picture{
+  width: 100%;
+}
+#connect_link1, #connect_link3{
+	position: absolute;
+	top: 30px;
+	right: -187%;
+}
+#connect_link2, #connect_link4{
+	position: absolute;
+	top: 80px;
+	right: -187%;
+}
+#picturehome-block{
+	top: -32px;
+}
+.poster-title1, .poster-title2{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  background-color: purple;
+}
+#right-block{
+  background-color: purple;
+}
+
+/* Menu */
+.navbar{
+position: absolute;
+margin-top: 0px;
+}
+/*.navbar-inverse{
+  color: purple;
+}
+.navbar-inverse:hover{
+  color: black;
+}*/
+.navbar-nav{
+  font-size: 19px;
+  margin-left: 5px;
+}
+.navbar-nav li:hover{
+  background-color: purple;
+}
+.container{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* MAP https://leafletjs.com */
+#mapid{
+  height: 659px;
+  width: 90%;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 50;
+  border: 5px solid purple;
+}
+
+/* Page connexion administrateur */
+#connection-form{
+  color: white;
+  width: 90%;
+  background-color: rgba(165, 105, 189, 1);
+  border-radius: 6px;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.4px solid purple;
+  text-align: center;
+}
+#connection-form a{
+  color: black;
+  border-radius: 10px;
+  border: 2px solid purple;
+  padding: 10px;
+  background-color: grey;
+}
+#connection-form a:hover{
+  background-color: purple;
+  color: white;
+}
+
+/* Formulaire inscription */
+#inscription-form{
+  width: 90%;
+  background-color: rgba(165, 105, 189, 1);
+  border-radius: 6px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.4px solid purple;
+  padding-left: 15px;
+  margin-bottom: 50px;
+}
+#inscription-form h3{
+  text-align: center;
+  color: white;
+}
+#inscription-form button{
+  color: green;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#btn-inscrip{
+  color: green;
+  font-weight: bold;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+}
+#inscription-form button:hover, #btn-inscrip:hover{
+  color: white;
+  background-color: purple;
+}
+/* Page registration */
+#announce-block{
+  font-style: italic;
+}
+li{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: black;
+}
+ul{
+  list-style-type: none;
+}
+input, textarea, select{
+  border: 1px solid #CCCCCC;
+  padding: 5px;
+  border-radius: 5px;
+}
+#pseudo-inscrip, #email-inscrip, #passconfirm-inscrip, #pass-inscrip, #birth-inscrip, #instrument-inscrip, #group-inscrip, #style-inscrip, #town-inscrip, #exper-inscrip, #link-inscrip, #mess-inscrip{
+  width: 90%;
+}
+select option{
+  color: black;
+}
+label{
+  margin-right: 10px;
+}
+/*#pseudoHelp, #passwordHelp, #birthHelp, */
+#inscrip-form-datas span {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 12px;
+}
+
+/* Formulaire annonce */
+#announce-form{
+  color: white;
+  width: 40%;
+  background-color: rgba(165, 105, 189, 0.3);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.4px solid purple;
+}
+#title-announce, #mess-announce{
+  width: 90%;
+}
+#announce-form h3{
+  text-align: center;
+}
+li{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: black;
+}
+ul{
+  list-style-type: none;
+}
+input, textarea, select{
+  border: 1px solid #CCCCCC;
+  padding: 5px;
+  border-radius: 5px;
+}
+#amateurpro-announce, #sologroup-announce{
+  color: black;
+}
+.btn{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  height: 50px;
+  width: 100px;
+  font-size: 40px;
+  box-shadow: 4px 4px 4px black;
+}
+.btn-couleur{
+  background-color: purple;
+  color: white;
+  font-size: 25px;
+  transition: all .1s linear; 
+}
+.btn:hover{
+  background-color: white;
+  color:purple;
+  border: 0.4px solid purple;
+  transform: scale(1.1);
+}
+.btn-connect{
+  background-color: purple;
+  color: white;
+  font-size: 13px;
+  transition: all .1s linear; 
+  width: 180px;
+  text-align: center;
+  font-weight: bold;
+  height: 35px;
+  border: 2px solid grey;
+}
+.p1{
+  color:black;
+}
+
+/* Page Home */
+.affiche_petite0, .affiche_petite1, .affiche_petite2, .affiche_petite3{
+  width: 120px;
+  height: 150px;
+  display: flex;
+  /*flex-direction: row;*/
+  /*flex-wrap: wrap;*/
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  transition: all .2s ease-in; 
+}
+.affiche_petite0:hover, .affiche_petite1:hover, .affiche_petite2:hover, .affiche_petite3:hover{
+  transform: rotate(360deg);
+}
+table{
+  width: 100%;
+  font-size: 15px;
+  border: 2px solid white;
+  margin-bottom: 50px;
+}
+tr:nth-child(odd){
+  background:#EAECEE;
+  vertical-align: top; 
+}
+#title-table{
+  font-size: 22px;
+  color: white;
+}
+th{
+  background: purple;
+  color: white;
+  line-height: 40px;
+  padding-left: 5px;
+}
+tr:hover{
+  color:purple;
+  border: 2px solid purple;
+  background-color: grey;
+}
+td{
+  border-bottom: 1px solid grey;
+  padding-left: 5px;
+}
+ul{
+  padding-left: 5px;
+  vertical-align: top;
+}
+
+/* Pages administration des festivals et concerts */
+.concert-title{
+  top:100px;
+}
+.input-width{
+  width: 90%;
+}
+#btn-newfestival, #btn-newconcert{
+  font-weight: bold;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#btn-newfestival:hover, #btn-newconcert:hover {
+  background-color: purple;
+  font-weight: bold;
+  color: white;
+}
+#festival-form{
+  color: white;
+  width: 90%;
+  background-color: rgba(165, 105, 189, 1);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.4px solid purple;
+  text-align: center;
+}
+#style-modify{
+  width: 90%;
+  text-align: center;
+}
+#festivalslist-title{
+  color: white;
+  white-space: nowrap;
+}
+#festivalslist-title span{
+  font-size: 20px;
+  color: blue;
+  font-style: italic;
+  padding-left: 20px;
+}
+#festivalslist-title a:hover{
+  color: purple;
+  text-decoration:none; 
+}
+.festivalsconcerts-title{
+  color: white;
+  text-align: center;
+}
+.admin-title{
+  color: white;
+}
+
+/* Page administration  des profils */
+#btn-modifyuser:hover, #btn-deleteprofil:hover{
+  background-color: purple;
+}
+
+/* Page userconnection */
+#userconnection-block{
+  width: 90%;
+  background-color: rgba(165, 105, 189, 1);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.4px solid purple;
+  text-align: center;
+  margin-top: 50px;
+}
+#userconnection-block button{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#userconnection-block button:hover{
+  color: white;
+  background-color: purple;
+}
+.fa-hand-peace{
+  font-size: 45px;
+}
+
+#userconnection-block a{
+  float: none;
+  background-color: grey;
+  color:purple;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#userconnection-block a:hover{
+  background-color: purple;
+  color:white;
+}
+
+/* Page deleteprofilsuccess */
+#profildelete-block{
+  color: white;
+  background-color: rgba(165, 105, 189, 1);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.4px solid purple;
+  text-align: center;
+}
+
+/* Page festivamodifysuccess */
+#block-festival-success{
+  text-align: center;
+  color: green;
+  background-color: black;
+  border: 0.4px solid purple;
+  border-radius: 6px;
+}
+
+/* Page administration des festivals */
+#festivals-admin{
+  text-align: center;
+}
+#festivals-admin input{
+  width: 90%;
+  text-align: center;
+}
+#festivals-admin tr{
+  text-align: center;
+}
+#btn-festivalmodify, #btn-concertmodify{
+  color: green;
+}
+#btn-festivaldelete, #btn-concertdelete{
+  text-align: center;
+  color: red;
+}
+#btn-festivalmodify i, #btn-festivaldelete i, #btn-concertmodify i, #btn-concertdelete i{
+  margin-right: auto;
+  margin-left: auto;
+}
+#btn-festivalmodify:hover, #btn-concertmodify:hover{
+  background-color: purple;
+}
+#btn-festivaldelete:hover, #btn-concertdelete:hover{
+  background-color: purple;
+}
+#festivals-admin td:first-child{
+  width: 40px;
+}
+
+#scrolltop-block{
+    position: fixed;
+    right: 0; 
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 5px;
+    width: auto;
+    height: auto;    
+    bottom: 5%;
+    text-align: center;
+    z-index: 999;
+}
+#user-identity-block{
+    position: fixed;
+    right: 0; 
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+    padding-top: 2px;
+    padding-right: 4px;
+    padding-left: 4px;
+    width: auto;
+    height: 28px;    
+    top: 10%;
+    text-align: center;
+    z-index: 999;
+    background-color: purple;
+    border-radius: 5px;
+    opacity: 0.5;
+}
+.fa-chevron-circle-up{
+  font-size: 40px;
+  color: purple;
+}
+.fa-chevron-circle-up:hover{
+  color: grey; 
+}
+
+/* Page confidentiality */
+#confidentiality-block{
+  width: 90%;
+  background-color: rgba(165, 105, 189, 1);
+  border-radius: 6px;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.4px solid purple;
+  text-align: center;
+  margin-top: 50px;
+}
+#confidentiality-block h1{
+  color: white;
+}
+
+/* Slider */
+.slider {
+    width: 265px;
+    height: 385px;
+    overflow: hidden;
+    margin: 5px auto;
+  }
+  .slides {
+    width: calc(265px * 3);
+    animation: glisse 10s infinite;
+  }
+  .slide {
+    float: left;
+  }
+
+  @keyframes glisse {
+    0% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateX(0);
+    }
+    33% {
+      transform: translateX(-265px);
+    }
+    43% {
+      transform: translateX(-265px);
+    }
+    66% {
+      transform: translateX(-530px);
+    }
+    76% {
+      transform: translateX(-530px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+
+/* Pied de page */
+footer{
+  text-align: center;
+  background-color: #222;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+footer a{
+  color: white;
+}
+footer a:hover{
+  color: purple;
+}
+.connection-link .fas.fa-user-cog{
+  margin-left: 10px;
+  color: white;
+}
+.connection-link{
+  color: white;
+}
+.cookie-alert{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 10px;
+  border: 2px solid purple;
+  background: #222;
+  color: #fff;
+  padding: 10px 15px;
+  width: 280px;
+  z-index: 1000;
+}
+.cookie-alert span{ 
+  display: block;
+  text-align: center;
+  padding: 5px 10px;
+  margin: 12px auto 0 auto;
+  border-radius: 10px;
+  background: purple;
+  border: 2px solid grey;
+  color: white;
+  transition: all .3s ease;
+  font-weight: bold;
+  text-decoration: none;
+}
+.cookie-alert span:hover{
+  background: grey;
+  color: black;
+  text-decoration: none;
+}
+
+/* responsive design - media queries */
+
+@media (max-width: 1000px) {
+  .affiche_petite0, .affiche_petite1, .affiche_petite2, .affiche_petite3{
+    display: none;
+  }
+  .bretzic_picture{
+    height: 255px;
+  }
+  #home-titles{
+    top: 80px;
+    font-size: 1.5em;
+    margin-left: 5px;
+  }
+  .home-titles1{
+    margin-top: 10px;
+  }
+  #connect_link1, #connect_link2,#connect_link3, #connect_link4{
+    right: 0;
+  }
+  .h1-custom{
+   display: none;
+  }
+  .poster-title2{
+    display: none;
+  }
+  #right-block{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #festivalslist-title span{
+    display: none
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media only screen and (max-width:480px) {
+   .cookie-alert {
+      text-align: center;
+      left: 0; right: 0;;
+      margin: 0 auto;
+      max-width: 700px;
+      padding: 10px 30px;
+   }
+   h1, h2{
+    font-size: 20px;
+   }
+   #festivalslist-title span{
+    display: none;
+   }
+   #connect_link1, #connect_link2,#connect_link3, #connect_link4{
+    right: 0;
+   }
+}
